@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "admin",
-    "password": "1234qwer",
+    "password": NULL,
     "database": "project_1_database",
     "host": "project-1-database.cvi8bulrqijy.us-east-2.rds.amazonaws.com",
     "dialect": "mysql",
@@ -9,14 +9,14 @@
   },
   "test": {
     "username": "admin",
-    "password": "1234qwer",
+    "password": NULL,
     "database": "project_1_database",
     "host": "project-1-database.cvi8bulrqijy.us-east-2.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
     "username": "admin",
-    "password": "1234qwer",
+    "password": NULL,
     "database": "project_1_database",
     "host": "project-1-database.cvi8bulrqijy.us-east-2.rds.amazonaws.com",
     "dialect": "mysql"
