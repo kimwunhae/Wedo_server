@@ -65,6 +65,8 @@ app.post('/signin', auth.signin)
 //PASSPORT - OAUTH2.0 - GOOGLE
 app.get('/auth/google', (req, res, next) => auth.oAuthGoogle(req, res, next))
 app.get('/auth/google/redirect', auth.googleRedirect)
+app.get(`/userinfo`, controller.userinfoController)
+app.post(`/friendinfo`, controller.friendinfoController);
 
 // get 요청에 대한 응답 (API)
 app.post("/signup", controller.signUpController);

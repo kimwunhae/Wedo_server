@@ -14,6 +14,27 @@ const crypto = require('crypto');
 const Op = sequelize.Op;
 
 module.exports = {
+    userinfoController: (req, res) => {
+        const session_userid = req.session.passport.user;
+
+        user.findOne({
+            where: {
+                id: session_userid
+            }
+        })
+            .then(data => res.status(200).json(data))
+    },
+
+    friendinfoController: (req, res) => {
+        let { id } = req.body
+        user.findOne({
+            where: {
+                id: id
+            }
+        })
+            .then(data => res.status(200).json(data))
+
+    },
     signUpController: (req, res) => {
         const { email, password, fullname, nickname } = req.body;
 
@@ -356,6 +377,7 @@ module.exports = {
                         .then(() => res.status(200).json(data))
                 } else { res.status(400) }
             })
+            .catch(e => console.log(e))
     },
 
     shareDelete: (req, res) => {
