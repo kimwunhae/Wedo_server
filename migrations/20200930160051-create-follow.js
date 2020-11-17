@@ -8,21 +8,19 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user_id: {
+      block: {
+        type: Sequelize.BOOLEAN,
         allowNull: false,
-        type: Sequelize.INTEGER,
-        references :{
-          model : 'users',
-          key : 'id'
-        }
+        defaultValue: 0
       },
-      follow_id: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references : {
-          model: 'users',
-          key : 'id'
-        }
+      id: {
+        type: Sequelize.INTEGER
+      },
+      userId: {
+        type: Sequelize.INTEGER
+      },
+      friendId: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
